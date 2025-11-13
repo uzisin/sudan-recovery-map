@@ -1,0 +1,48 @@
+1. learning Leaflets 
+2. learning Firebase 
+3. project Colors :
+
+Light Mode :
+	Text : #050315
+	Primary : #2f27ce
+	Secondary : #dedcff
+	Accent : #433bff , if need it
+
+	
+Dark Mode : 
+	Text : #eae9fc
+	Background : #000000
+	primary : #3a31d8
+	Secondary: #020024
+	Accent: #0600c2
+
+
+
+Home Page :
+1. introduction 
+2. Cards 
+
+3. Impact Section (Stats & Visuals)
+Show real-time or key statistics like:
+
+"1000+ areas mapped"
+
+"5000+ community contributions"
+
+Use icons, counters, or charts.
+	
+4. Call to Action Section (Highlight)
+Big, bold section to push people to take the next step:
+
+"Join the movement. Be the voice of your community."
+
+// its leads to page that make the user choose the state and city and village or area and add data by asking questions
+
+
+5. Stories from the Ground
+
+this section have some collection of soties then there is a button leads to a page that contains posts , it will be on the top the newest posts and the more liked our make up button like jodel APP
+6. scrum master
+
+
+

@@ -1,0 +1,15 @@
+8. Summary/Conclusion
+The Sudan War Recovery & Support Platform will be a pioneering web tool that connects data, people, and organizations to accelerate the country’s recovery and improve service delivery.
+
+9. Bibliography
+(To be finalized after literature review; includes academic references, technical papers, related systems.)
+
+10. Artifacts
+Web app prototype
+
+Source code repository
+
+User manual
+
+Demo videos/screenshots
+
