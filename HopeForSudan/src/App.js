@@ -14,6 +14,18 @@ import Stories from "./Stories";
 import Map from "./Map";
 import Reports from "./Reports";
 import Profile from "./Profile";
+import RecoveryDashboard from "./RecoveryDashboard";
+import axios from "axios";
+
+axios.defaults.baseURL = "http://127.0.0.1:8000";
+axios.defaults.withCredentials = true;
+
+const token = localStorage.getItem("token");
+if (token) {
+  axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+}
+
+
 
 function App() {
   const isLoggedIn = !!localStorage.getItem("token");
@@ -35,6 +47,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/Stories" element={<Stories />} />
         <Route path="/Map" element={<Map />} />
+        <Route path="/dashboard" element={<RecoveryDashboard />} />
         <Route
   path="/Reports"
   element={

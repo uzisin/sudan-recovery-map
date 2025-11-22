@@ -1,0 +1,149 @@
+{
+  "Khartoum": [
+    "Khartoum",
+    "Bahri (Khartoum North)",
+    "Omdurman",
+    "Al Kalakla",
+    "Al Shajara",
+    "Jebel Aulia",
+    "Soba",
+    "Haj Yousif",
+    "Kadro",
+    "Al Thawra"
+  ],
+  "Gezira": [
+    "Wad Madani",
+    "Hantoub",
+    "Al Managil",
+    "Al Hasahisa",
+    "Rufaa",
+    "Al Kamleen",
+    "Tamboul"
+  ],
+  "Blue Nile": [
+    "Ad Damazin",
+    "Roseires",
+    "Geisan",
+    "Bau",
+    "Kurmak",
+    "Um Darfa"
+  ],
+  "North Darfur": [
+    "El Fasher",
+    "Kutum",
+    "Mellit",
+    "Kabkabiya",
+    "Tawila",
+    "Um Keddada",
+    "Saraf Omra"
+  ],
+  "South Darfur": [
+    "Nyala",
+    "Kas",
+    "Reheid El Berdi",
+    "Tulus",
+    "Gereida",
+    "Ed El Fursan",
+    "Belail"
+  ],
+  "East Darfur": [
+    "Ed Daein",
+    "Abu Jabra",
+    "Adila",
+    "Asalaya",
+    "El Ferdous"
+  ],
+  "Central Darfur": [
+    "Zalingei",
+    "Nertiti",
+    "Garsila",
+    "Bindisi",
+    "Um Dukhun"
+  ],
+  "West Darfur": [
+    "El Geneina",
+    "Mornei",
+    "Habila",
+    "Kerenik",
+    "Sirba",
+    "Foro Baranga"
+  ],
+  "Red Sea": [
+    "Port Sudan",
+    "Sinkat",
+    "Tokar",
+    "Suakin",
+    "Haya",
+    "Derudeb",
+    "Agig"
+  ],
+  "Kassala": [
+    "Kassala",
+    "New Halfa",
+    "Aroma",
+    "Hamashkoreib",
+    "Telkuk",
+    "Khashm El Girba"
+  ],
+  "Al Qadarif": [
+    "Al Qadarif City",
+    "Fao",
+    "Butana",
+    "Basonda",
+    "Galoabat",
+    "Showak"
+  ],
+  "Sennar": [
+    "Sennar",
+    "Singa",
+    "Dinder",
+    "Abu Hugar",
+    "Al Mazmum"
+  ],
+  "White Nile": [
+    "Kosti",
+    "Rabak",
+    "Al Duweim",
+    "Al Jabalain",
+    "El Salam",
+    "Tandalti"
+  ],
+  "River Nile": [
+    "Atbara",
+    "Shendi",
+    "Ad Damer",
+    "Abu Hamed",
+    "Berber",
+    "El Matamma"
+  ],
+  "Northern": [
+    "Dongola",
+    "Merowe",
+    "Wadi Halfa",
+    "Al Goled",
+    "Dabbah"
+  ],
+  "North Kordofan": [
+    "El Obeid",
+    "Bara",
+    "Um Ruwaba",
+    "An Nuhud",
+    "Abu Zabad",
+    "Um Dam Haj Ahmed"
+  ],
+  "South Kordofan": [
+    "Kadugli",
+    "Dilling",
+    "Talodi",
+    "Abu Jebeha",
+    "Lagawa",
+    "Kologi"
+  ],
+  "West Kordofan": [
+    "Al Fula",
+    "Muglad",
+    "Babanusa",
+    "Dibab",
+    "El Sunut"
+  ]
+}

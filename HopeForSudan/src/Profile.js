@@ -13,10 +13,13 @@ export default function Profile() {
     password_confirmation: "",
   });
   const [savingPw, setSavingPw] = useState(false);
+
   const [myReports, setMyReports] = useState([]);
+  const [myStories, setMyStories] = useState([]); // 🔥 NEW
+
   const navigate = useNavigate();
 
-  // تحميل بيانات المستخدم والتقارير
+  // Load user, reports, and stories
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -49,6 +52,14 @@ export default function Profile() {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setMyReports(res.data || []))
+      .catch(() => {});
+
+    // 🔥 fetch my stories
+    api
+      .get("/my-stories", {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((res) => setMyStories(res.data || []))
       .catch(() => {});
   }, [navigate]);
 
@@ -105,7 +116,6 @@ export default function Profile() {
   };
 
   const handleEditReport = (report) => {
-    // نمشي لصفحة التقارير ونرسل التقرير في state
     navigate("/Reports", {
       state: {
         edit: true,
@@ -125,6 +135,31 @@ export default function Profile() {
     } catch (err) {
       console.error(err.response?.data || err.message);
       alert("❌ Failed to delete report");
+    }
+  };
+
+  // 🔥 Edit story → go to Stories page with state
+  const handleEditStory = (story) => {
+    navigate("/Stories", {
+      state: {
+        edit: true,
+        story,
+      },
+    });
+  };
+
+  // 🔥 Delete story
+  const handleDeleteStory = async (id) => {
+    if (!window.confirm("Delete this story?")) return;
+    const token = localStorage.getItem("token");
+    try {
+      await api.delete(`/stories/${id}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setMyStories((list) => list.filter((s) => s.id !== id));
+    } catch (err) {
+      console.error(err.response?.data || err.message);
+      alert("❌ Failed to delete story");
     }
   };
 
@@ -231,7 +266,9 @@ export default function Profile() {
         <div className="mt-5">
           <h4 className="mb-3">My Reports</h4>
           {myReports.length === 0 && (
-            <p className="text-secondary">You haven't submitted any reports yet.</p>
+            <p className="text-secondary">
+              You haven't submitted any reports yet.
+            </p>
           )}
 
           {myReports.length > 0 && (
@@ -263,6 +300,62 @@ export default function Profile() {
                         <button
                           className="btn btn-sm btn-outline-danger"
                           onClick={() => handleDeleteReport(r.id)}
+                        >
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+
+        {/* 🔥 My Stories list */}
+        <div className="mt-5">
+          <h4 className="mb-3">My Stories</h4>
+          {myStories.length === 0 && (
+            <p className="text-secondary">
+              You haven't shared any stories yet.
+            </p>
+          )}
+
+          {myStories.length > 0 && (
+            <div className="table-responsive">
+              <table className="table table-dark table-striped align-middle">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Area</th>
+                    <th>Excerpt</th>
+                    <th>Votes</th>
+                    <th>Created</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {myStories.map((s, idx) => (
+                    <tr key={s.id}>
+                      <td>{idx + 1}</td>
+                      <td>{s.city}</td>
+                      <td>
+                        {s.story && s.story.length > 60
+                          ? s.story.slice(0, 60) + "..."
+                          : s.story}
+                      </td>
+                      <td>{s.votes}</td>
+                      <td>{new Date(s.created_at).toLocaleString()}</td>
+                      <td className="text-end">
+                        <button
+                          className="btn btn-sm btn-outline-primary me-2"
+                          onClick={() => handleEditStory(s)}
+                        >
+                          Edit
+                        </button>
+                        <button
+                          className="btn btn-sm btn-outline-danger"
+                          onClick={() => handleDeleteStory(s.id)}
                         >
                           Delete
                         </button>
